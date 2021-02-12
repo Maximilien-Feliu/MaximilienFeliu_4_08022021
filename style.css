@@ -768,6 +768,43 @@ h4 {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
 }
 
+.black-light {
+    color: #7c7c7ce5!important;
+    font-weight: bold;
+}
+
+#section-title {
+    width: 60%;
+    margin-left: 20rem;
+}
+
+cite {
+    font-size: 22px;
+}
+
+.cite-small {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#link_partner ul {
+    padding: 0;
+}
+
+#link_partner li {
+    list-style-type: none;
+    margin-top: 1.3em;
+}
+
+#link_partner li a {
+    text-decoration: underline;
+}
+
+#link_partner li a:hover {
+    color: #FFFFFF!important;
+}
+
 .black-background {
     background-color: rgba(165, 147, 99, 0.7);
     padding: 40px 40px 40px 40px;
