@@ -768,6 +768,10 @@ h4 {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
 }
 
+.col-md-offset-2 {
+    margin-left: 16.66666667%
+}
+
 .black-light {
     color: #7c7c7ce5!important;
     font-weight: bold;
@@ -812,8 +816,7 @@ cite {
 }
 
 .navbar-nav li a {
-    border: 3px dotted #f3976c;
-    border-radius: 35px;
+    border-bottom: 3px solid #f3976c;
 }
 
 .navbar-nav li a:hover{
@@ -832,6 +835,12 @@ cite {
 
 .bgc-white {
     background-color: #FFFFFF;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto
 }
 
 .bgc-dark-slate-blue {
@@ -891,6 +900,16 @@ cite {
 
 .bg-presentation {
     background-image: url("img/image-de-presentation_resize.webp"); 
+}
+
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img,
+.img-responsive,
+.thumbnail a>img,
+.thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: auto
 }
 
 @media (max-width: 1024px) {
@@ -1004,6 +1023,7 @@ cite {
         border-right-color: transparent;
         border-left-color: transparent;
     }
+
     #hero-bloc .navbar .nav {
         background: rgba(0, 0, 0, .8);
     }
@@ -1017,6 +1037,7 @@ cite {
         left: -1px;
         right: -1px;
     }
+
     .navbar-collapse {
         padding: 0;
         overflow-x: hidden;
