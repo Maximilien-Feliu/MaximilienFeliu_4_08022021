@@ -29,14 +29,14 @@ function setUpSpecialNavs() {
         $(".content-tint").removeClass("on"), $(".selected-nav").click(), setTimeout(function() {
             $(".content-tint").remove()
         }, 10)
-    }).on("click", ".blocsapp-special-menu a", function(t) {
-        $(t.target).closest(".dropdown-toggle").length || $(".close-special-menu").mousedown()
+    }).on("click", ".special-dropdown-nav a", function(t) {
+        $(t.target).closest(".special-dropdown-nav").length || $(".close-special-menu").mousedown()
     })
 }
 
 function extraNavFuncs() {
     $(".site-navigation a").click(function(t) {
-        $(t.target).closest(".dropdown-toggle").length || $(".navbar-collapse").collapse("hide")
+        $(t.target).closest(".special-dropdown-nav").length || $(".navbar-collapse").collapse("hide")
     }), $("a.dropdown-toggle").click(function(t) {
         $(this).parent().addClass("target-open-menu"), $(this).closest(".dropdown-menu").find(".dropdown.open").each(function(t) {
             $(this).hasClass("target-open-menu") || $(this).removeClass("open")
@@ -188,16 +188,3 @@ function addLightBoxSwipeSupport() {
         threshold: 0
     })
 }
-$(document).ready(function() {
-    $("#scroll-hero").click(function(t) {
-        t.preventDefault(), $("html,body").animate({
-            scrollTop: $("#scroll-hero").closest(".bloc").height()
-        }, "slow")
-    }), extraNavFuncs(), setUpSpecialNavs(), setUpDropdownSubs(), setUpLightBox(), setUpVisibilityToggle(), addSwipeSupport(), addKeyBoardSupport(), -1 != navigator.userAgent.indexOf("Safari") && -1 == navigator.userAgent.indexOf("Chrome") && $("#page-loading-blocs-notifaction").remove()
-}), $(window).load(function() {
-    setFillScreenBlocHeight(), animateWhenVisible(), $("#page-loading-blocs-notifaction").remove()
-}).resize(function() {
-    setFillScreenBlocHeight()
-}), $(function() {
-    $('[data-toggle="tooltip"]').tooltip()
-});
